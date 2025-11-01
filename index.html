@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-white shadow-md py-4">
+        <nav class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-2xl font-bold">Naimul Hasan</h1>
+            <ul class="flex gap-6">
+                <li><a href="index.html" class="text-indigo-600 font-semibold">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<main class="relative h-[80vh] flex items-center justify-center text-center text-white overflow-hidden">
+    <!-- Background Images -->
+    <div id="bg-slider" class="absolute inset-0 z-0">
+        <img src="/image/360_F_140251075_yL2NBgp52532J7GuRPQi3kBksfz57cyw.jpg"
+            class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+            alt="Slide 1">
+        <img src="https://source.unsplash.com/1600x900/?developer"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+            alt="Slide 2">
+        <img src="https://source.unsplash.com/1600x900/?programming"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+            alt="Slide 3">
+    </div>
+
+    <!-- Overlay for dim effect -->
+    <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
+    <!-- Hero Content -->
+    <section class="relative z-20 px-6">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Naimul Hasan</h2>
+        <p class="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
+            A Front-End Developer passionate about clean design and modern web technologies.
+        </p>
+        <a href="contact.html"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg shadow-lg transition">
+            Hire Me
+        </a>
+    </section>
+</main>
+
+
+<section
+    class="my-12 bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-600 p-8 rounded-lg shadow-sm">
+    <h3 class="text-3xl font-bold text-indigo-700 mb-4 text-center">Career Summary</h3>
+    <p class="text-gray-700 text-lg leading-relaxed">
+        A creative and detail-oriented <strong>Front-End Developer</strong> with a passion for crafting beautiful,
+        user-friendly,
+        and high-performance web interfaces. With hands-on experience in <strong>HTML, Tailwind CSS, JavaScript, and
+            React</strong>,
+        I specialize in building responsive designs that work seamlessly across all devices.
+        My long-term goal is to evolve into a full-stack developer and contribute to impactful digital innovations
+        worldwide.
+    </p>
+</section>
+
+
+<!-- Career, Mission & Vision Section -->
+<section class="my-20">
+    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">My Goals</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+        <!-- Career -->
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+            <div class="text-indigo-600 text-4xl mb-3">💼</div>
+            <h3 class="text-xl font-semibold mb-2">Career</h3>
+            <p class="text-gray-700">
+                Building a strong career in web development through continuous learning,
+                hands-on projects, and innovative problem-solving.
+            </p>
+        </div>
+
+        <!-- Mission -->
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+            <div class="text-green-600 text-4xl mb-3">🎯</div>
+            <h3 class="text-xl font-semibold mb-2">Mission</h3>
+            <p class="text-gray-700">
+                To design and develop impactful digital solutions that empower individuals
+                and businesses to succeed online.
+            </p>
+        </div>
+
+        <!-- Vision -->
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
+            <div class="text-yellow-500 text-4xl mb-3">🚀</div>
+            <h3 class="text-xl font-semibold mb-2">Vision</h3>
+            <p class="text-gray-700">
+                To become a globally recognized developer known for creativity,
+                reliability, and meaningful contributions to the tech community.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-100" id="services">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Service 1 -->
+                <div class="bg-white shadow-lg rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="text-red-600 mb-4 text-4xl">💻</div>
+                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-600">We create modern, responsive, and high-performance websites for your
+                        business.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white shadow-lg rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="text-red-600 mb-4 text-4xl">🎨</div>
+                    <h3 class="text-xl font-semibold mb-2">Graphic Design</h3>
+                    <p class="text-gray-600">Creative and impactful visuals that help your brand stand out.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white shadow-lg rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="text-red-600 mb-4 text-4xl">📱</div>
+                    <h3 class="text-xl font-semibold mb-2">App Development</h3>
+                    <p class="text-gray-600">Custom mobile applications that connect your brand with users anywhere.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white shadow-lg rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="text-red-600 mb-4 text-4xl">📷</div>
+                    <h3 class="text-xl font-semibold mb-2">Photography</h3>
+                    <p class="text-gray-600">Professional photography to capture your story with creativity and style.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="bg-white border-t text-center py-6 text-sm text-gray-500">© 2025 Your Name. All rights reserved.
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <!-- Simple JS for slider -->
+<!-- Background Slider Script -->
+<script>
+    const slides = document.querySelectorAll("#bg-slider img");
+    let index = 0;
+
+    setInterval(() => {
+        slides[index].classList.remove("opacity-100");
+        slides[index].classList.add("opacity-0");
+        index = (index + 1) % slides.length;
+        slides[index].classList.remove("opacity-0");
+        slides[index].classList.add("opacity-100");
+    }, 5000); // Change every 5 seconds
+</script>
+</body>
+
+</html>
