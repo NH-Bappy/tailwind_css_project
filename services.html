@@ -4,43 +4,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Ayesha Rahman</title>
+    <title>Services | Naimul Hasan - Full-Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
-    <header class="bg-white shadow-md py-4">
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow-md py-4 sticky top-0 z-10">
         <nav class="container mx-auto flex justify-between items-center px-6">
             <h1 class="text-2xl font-bold text-indigo-600">Naimul Hasan</h1>
             <ul class="flex gap-6">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="index.html" class="hover:text-indigo-600 transition">Home</a></li>
+                <li><a href="about.html" class="hover:text-indigo-600 transition">About</a></li>
+                <li><a href="portfolio.html" class="hover:text-indigo-600 transition">Portfolio</a></li>
                 <li><a href="services.html" class="text-indigo-600 font-semibold">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="hover:text-indigo-600 transition">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container mx-auto px-6 py-12">
-        <h2 class="text-3xl font-bold mb-8">My Services</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded shadow">
-                <h3 class="font-semibold mb-2">Website Design</h3>
-                <p class="text-gray-600 text-sm">Custom responsive designs using Tailwind CSS.</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="gradient-bg text-white py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Full-Stack Development Services</h1>
+                <p class="text-xl max-w-2xl mx-auto">Building modern, scalable web applications with cutting-edge
+                    technologies and best practices.</p>
             </div>
-            <div class="bg-white p-6 rounded shadow">
-                <h3 class="font-semibold mb-2">Frontend Development</h3>
-                <p class="text-gray-600 text-sm">Interactive websites built with HTML, CSS, and JS.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section class="container mx-auto px-6 py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">My Expertise</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">I provide end-to-end web development solutions, from
+                    responsive front-end interfaces to robust back-end systems.</p>
             </div>
-            <div class="bg-white p-6 rounded shadow">
-                <h3 class="font-semibold mb-2">Website Optimization</h3>
-                <p class="text-gray-600 text-sm">Improving performance and SEO for better reach.</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Web Development Services -->
+                <div class="bg-white p-6 rounded-lg shadow-md service-card">
+                    <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop-code text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Web Development</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Custom Website Development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Single Page Applications (SPAs)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Progressive Web Apps (PWAs)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>E-commerce Development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Landing Pages & Marketing Websites</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Back-end & Database Services -->
+                <div class="bg-white p-6 rounded-lg shadow-md service-card">
+                    <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-server text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Back-end & Database</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>API Development (REST/GraphQL)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Database Design & Management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Server-side Logic</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Authentication & Authorization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Performance Optimization</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Full-Stack Solutions -->
+                <div class="bg-white p-6 rounded-lg shadow-md service-card">
+                    <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-layer-group text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Full-Stack Solutions</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>End-to-End Platform Development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>SaaS Development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Web App Maintenance & Upgrades</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Legacy System Migration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Technical Consultation</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mobile & Cross-platform Services -->
+                <div class="bg-white p-6 rounded-lg shadow-md service-card">
+                    <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mobile & Cross-platform</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Responsive Web Apps</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Hybrid App Development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Mobile-First Design</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Cross-Platform Compatibility</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>App Store Deployment</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Technologies & Frameworks -->
+                <div class="bg-white p-6 rounded-lg shadow-md service-card">
+                    <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Technologies & Frameworks</h3>
+                    <div class="grid grid-cols-2 gap-3 text-gray-600">
+                        <div>
+                            <h4 class="font-semibold mb-2">Frontend</h4>
+                            <ul class="space-y-1 text-sm">
+                                <li>React, Vue, Angular</li>
+                                <li>HTML5, CSS3, JavaScript</li>
+                                <li>Tailwind CSS, Bootstrap</li>
+                                <li>TypeScript</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Backend</h4>
+                            <ul class="space-y-1 text-sm">
+                                <li>Node.js, Express</li>
+                                <li>Python, Django</li>
+                                <li>PHP, Laravel</li>
+                                <li>Java, Spring Boot</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Database</h4>
+                            <ul class="space-y-1 text-sm">
+                                <li>MySQL, PostgreSQL</li>
+                                <li>MongoDB, Firebase</li>
+                                <li>Redis</li>
+                                <li>GraphQL</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2">Mobile</h4>
+                            <ul class="space-y-1 text-sm">
+                                <li>React Native</li>
+                                <li>Flutter</li>
+                                <li>Ionic</li>
+                                <li>PWA</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process & Approach -->
+                <div class="bg-white p-6 rounded-lg shadow-md service-card">
+                    <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-project-diagram text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Development Process</h3>
+                    <ol class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span
+                                class="bg-indigo-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0">1</span>
+                            <span>Requirement Analysis & Planning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span
+                                class="bg-indigo-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0">2</span>
+                            <span>UI/UX Design & Prototyping</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span
+                                class="bg-indigo-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0">3</span>
+                            <span>Development & Implementation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span
+                                class="bg-indigo-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0">4</span>
+                            <span>Testing & Quality Assurance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span
+                                class="bg-indigo-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0">5</span>
+                            <span>Deployment & Maintenance</span>
+                        </li>
+                    </ol>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-indigo-50 py-12">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-6">Let's discuss how we can bring your ideas to life with a
+                    custom web solution tailored to your needs.</p>
+                <a href="contact.html"
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300">Get
+                    In Touch</a>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-white border-t text-center py-6 text-sm text-gray-500">© 2025 Ayesha Rahman</footer>
+<footer class="bg-white border-t py-6">
+    <div class="container mx-auto px-6 flex justify-between items-center text-sm text-gray-600">
+
+        <!-- Left Side: Copyright -->
+        <p>© 2025 Ayesha Rahman</p>
+
+        <!-- Right Side: Date & Time -->
+        <p id="dateTime" class="font-medium"></p>
+    </div>
+</footer>
 </body>
 
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        const options = {
+            weekday: 'short',
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        };
+        document.getElementById("dateTime").textContent = now.toLocaleString("en-US", options);
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+</script>
 </html>

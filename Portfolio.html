@@ -4,46 +4,470 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Ayesha Rahman</title>
+    <title>Portfolio | Naimul Hasan - Full-Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .category-btn {
+            transition: all 0.3s ease;
+        }
+
+        .category-btn.active {
+            background-color: #4f46e5;
+            color: white;
+        }
+
+        .project-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
-    <header class="bg-white shadow-md py-4">
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow-md py-4 sticky top-0 z-10">
         <nav class="container mx-auto flex justify-between items-center px-6">
             <h1 class="text-2xl font-bold text-indigo-600">Naimul Hasan</h1>
             <ul class="flex gap-6">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html" class="hover:text-indigo-600 transition">Home</a></li>
+                <li><a href="about.html" class="hover:text-indigo-600 transition">About</a></li>
                 <li><a href="portfolio.html" class="text-indigo-600 font-semibold">Portfolio</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html" class="hover:text-indigo-600 transition">Services</a></li>
+                <li><a href="contact.html" class="hover:text-indigo-600 transition">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container mx-auto px-6 py-12">
-        <h2 class="text-3xl font-bold mb-8">My Projects</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-white shadow p-4 rounded">
-                <div class="bg-gray-200 h-40 mb-4 flex items-center justify-center">Project 1</div>
-                <h3 class="font-semibold">Portfolio Website</h3>
-                <p class="text-gray-600 text-sm">A personal portfolio built with HTML, Tailwind, and JS.</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="gradient-bg text-white py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">My Portfolio</h1>
+                <p class="text-xl max-w-2xl mx-auto">Showcasing my full-stack development projects across various
+                    domains and technologies.</p>
             </div>
-            <div class="bg-white shadow p-4 rounded">
-                <div class="bg-gray-200 h-40 mb-4 flex items-center justify-center">Project 2</div>
-                <h3 class="font-semibold">E-commerce UI</h3>
-                <p class="text-gray-600 text-sm">Responsive front-end for a clothing store using React.</p>
+        </section>
+
+        <!-- Portfolio Filter -->
+        <section class="container mx-auto px-6 py-8">
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="category-btn bg-white px-4 py-2 rounded-full shadow-sm active" data-category="all">All
+                    Projects</button>
+                <button class="category-btn bg-white px-4 py-2 rounded-full shadow-sm" data-category="web">Web
+                    Applications</button>
+                <button class="category-btn bg-white px-4 py-2 rounded-full shadow-sm"
+                    data-category="dashboard">Dashboards</button>
+                <button class="category-btn bg-white px-4 py-2 rounded-full shadow-sm"
+                    data-category="saas">SaaS</button>
+                <button class="category-btn bg-white px-4 py-2 rounded-full shadow-sm"
+                    data-category="realtime">Real-time Apps</button>
+                <button class="category-btn bg-white px-4 py-2 rounded-full shadow-sm"
+                    data-category="automation">Automation Tools</button>
+                <button class="category-btn bg-white px-4 py-2 rounded-full shadow-sm" data-category="learning">Learning
+                    Platforms</button>
+                <button class="category-btn bg-white px-4 py-2 rounded-full shadow-sm" data-category="niche">Niche
+                    Projects</button>
             </div>
-            <div class="bg-white shadow p-4 rounded">
-                <div class="bg-gray-200 h-40 mb-4 flex items-center justify-center">Project 3</div>
-                <h3 class="font-semibold">Blog Design</h3>
-                <p class="text-gray-600 text-sm">Minimal blog UI with dark/light mode support.</p>
+
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+                <!-- Web Applications -->
+                <div class="bg-white rounded-lg shadow-md project-card" data-category="web">
+                    <div class="project-image bg-gradient-to-r from-blue-400 to-purple-500">
+                        <div class="project-overlay">
+                            <div class="flex gap-4">
+                                <button class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View
+                                    Details</button>
+                                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium">Live
+                                    Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Social Media Platform</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Web App</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Full-featured social network with user profiles, posts, likes,
+                            comments, and real-time notifications.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">React</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Node.js</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">MongoDB</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md project-card" data-category="web">
+                    <div class="project-image bg-gradient-to-r from-green-400 to-blue-500">
+                        <div class="project-overlay">
+                            <div class="flex gap-4">
+                                <button class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View
+                                    Details</button>
+                                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium">Live
+                                    Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">E-commerce Platform</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Web App</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Complete online store with product catalog, shopping cart, payment
+                            processing, and admin dashboard.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Vue.js</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Express</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">PostgreSQL</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Stripe API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md project-card" data-category="web">
+                    <div class="project-image bg-gradient-to-r from-purple-400 to-pink-500">
+                        <div class="project-overlay">
+                            <div class="flex gap-4">
+                                <button class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View
+                                    Details</button>
+                                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium">Live
+                                    Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Content Management System</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Web App</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Robust blogging platform with WYSIWYG editor, user roles, and
+                            advanced content management features.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">React</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Django</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">PostgreSQL</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">AWS S3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboards & Admin Panels -->
+                <div class="bg-white rounded-lg shadow-md project-card" data-category="dashboard">
+                    <div class="project-image bg-gradient-to-r from-yellow-400 to-red-500">
+                        <div class="project-overlay">
+                            <div class="flex gap-4">
+                                <button class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View
+                                    Details</button>
+                                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium">Live
+                                    Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Analytics Dashboard</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Dashboard</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Interactive data visualization dashboard with real-time metrics,
+                            charts, and customizable reports.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">React</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">D3.js</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Node.js</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md project-card" data-category="dashboard">
+                    <div class="project-image bg-gradient-to-r from-green-400 to-teal-500">
+                        <div class="project-overlay">
+                            <div class="flex gap-4">
+                                <button class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View
+                                    Details</button>
+                                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium">Live
+                                    Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">CRM System</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Dashboard</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Customer relationship management platform with lead tracking,
+                            sales pipeline, and client communication tools.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Angular</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Laravel</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">MySQL</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">REST API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SaaS Applications -->
+                <div class="bg-white rounded-lg shadow-md project-card" data-category="saas">
+                    <div class="project-image bg-gradient-to-r from-blue-500 to-indigo-600">
+                        <div class="project-overlay">
+                            <div class="flex gap-4">
+                                <button class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View
+                                    Details</button>
+                                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium">Live
+                                    Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Project Management Tool</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">SaaS</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Kanban-style project management application with team
+                            collaboration, task tracking, and deadline management.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">React</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Firebase</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Material UI</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real-time Applications -->
+                <div class="bg-white rounded-lg shadow-md project-card" data-category="realtime">
+                    <div class="project-image bg-gradient-to-r from-purple-500 to-pink-600">
+                        <div class="project-overlay">
+                            <div class="flex gap-4">
+                                <button class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View
+                                    Details</button>
+                                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium">Live
+                                    Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Real-time Chat App</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Real-time</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Instant messaging application with private and group chats, file
+                            sharing, and online status indicators.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Vue.js</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Socket.io</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Node.js</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Automation Tools -->
+                <div class="bg-white rounded-lg shadow-md project-card" data-category="automation">
+                    <div class="project-image bg-gradient-to-r from-teal-400 to-blue-500">
+                        <div class="project-overlay">
+                            <div class="flex gap-4">
+                                <button class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View
+                                    Details</button>
+                                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium">Live
+                                    Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Expense Tracker</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Automation</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Personal finance management tool with expense categorization,
+                            budget tracking, and financial insights.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">React</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Express</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">MySQL</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Platforms -->
+                <div class="bg-white rounded-lg shadow-md project-card" data-category="learning">
+                    <div class="project-image bg-gradient-to-r from-orange-400 to-red-500">
+                        <div class="project-overlay">
+                            <div class="flex gap-4">
+                                <button class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View
+                                    Details</button>
+                                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium">Live
+                                    Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Online Learning Platform</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Learning</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Comprehensive e-learning system with course management, video
+                            lessons, quizzes, and progress tracking.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">React</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Django</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">PostgreSQL</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Niche Projects -->
+                <div class="bg-white rounded-lg shadow-md project-card" data-category="niche">
+                    <div class="project-image bg-gradient-to-r from-pink-400 to-purple-500">
+                        <div class="project-overlay">
+                            <div class="flex gap-4">
+                                <button class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-medium">View
+                                    Details</button>
+                                <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium">Live
+                                    Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Recipe Sharing Platform</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Niche</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Community-driven recipe website with search, ratings, meal
+                            planning, and grocery list generation.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Vue.js</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Node.js</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">MongoDB</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Elasticsearch</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-indigo-50 py-12">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4">Interested in Working Together?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-6">I'm always open to discussing new projects and
+                    opportunities. Let's bring your ideas to life!</p>
+                <a href="contact.html"
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300">Get
+                    In Touch</a>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-white border-t text-center py-6 text-sm text-gray-500">© 2025 Ayesha Rahman</footer>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Left Side: Copyright -->
+                <div class="mb-4 md:mb-0 text-center md:text-left">
+                    <p class="text-gray-400">&copy; 2025 Naimul Hasan. All rights reserved.</p>
+                </div>
+
+                <!-- Social links in the center -->
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-github text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-twitter text-xl"></i></a>
+                </div>
+
+                <!-- Right Side: Current date and time -->
+                <div class="text-gray-400 text-center md:text-right">
+                    <p id="dateTime" class="font-medium"></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to update date and time
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById("dateTime").textContent = now.toLocaleString("en-US", options);
+        }
+
+        // Project filtering functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.category-btn');
+            const projects = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const category = this.getAttribute('data-category');
+
+                    // Show/hide projects based on category
+                    projects.forEach(project => {
+                        if (category === 'all' || project.getAttribute('data-category') === category) {
+                            project.style.display = 'block';
+                        } else {
+                            project.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Initialize date and time
+            setInterval(updateDateTime, 1000);
+            updateDateTime();
+        });
+    </script>
 </body>
 
 </html>

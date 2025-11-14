@@ -4,180 +4,423 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Portfolio</title>
+    <title>Home | Naimul Hasan - Full-Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+
+        .tech-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .tech-icon:hover {
+            transform: scale(1.2);
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
-    <header class="bg-white shadow-md py-4">
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
         <nav class="container mx-auto flex justify-between items-center px-6">
-            <h1 class="text-2xl font-bold">Naimul Hasan</h1>
+            <h1 class="text-2xl font-bold text-indigo-600">Naimul Hasan</h1>
             <ul class="flex gap-6">
                 <li><a href="index.html" class="text-indigo-600 font-semibold">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html" class="hover:text-indigo-600 transition">About</a></li>
+                <li><a href="portfolio.html" class="hover:text-indigo-600 transition">Portfolio</a></li>
+                <li><a href="services.html" class="hover:text-indigo-600 transition">Services</a></li>
+                <li><a href="contact.html" class="hover:text-indigo-600 transition">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-
-<main class="relative h-[80vh] flex items-center justify-center text-center text-white overflow-hidden">
-    <!-- Background Images -->
-    <div id="bg-slider" class="absolute inset-0 z-0">
-        <img src="/image/360_F_140251075_yL2NBgp52532J7GuRPQi3kBksfz57cyw.jpg"
-            class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
-            alt="Slide 1">
-        <img src="https://source.unsplash.com/1600x900/?developer"
-            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
-            alt="Slide 2">
-        <img src="https://source.unsplash.com/1600x900/?programming"
-            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
-            alt="Slide 3">
-    </div>
-
-    <!-- Overlay for dim effect -->
-    <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
-
-    <!-- Hero Content -->
-    <section class="relative z-20 px-6">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Naimul Hasan</h2>
-        <p class="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
-            A Front-End Developer passionate about clean design and modern web technologies.
-        </p>
-        <a href="contact.html"
-            class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg shadow-lg transition">
-            Hire Me
-        </a>
-    </section>
-</main>
-
-
-<section
-    class="my-12 bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-600 p-8 rounded-lg shadow-sm">
-    <h3 class="text-3xl font-bold text-indigo-700 mb-4 text-center">Career Summary</h3>
-    <p class="text-gray-700 text-lg leading-relaxed">
-        A creative and detail-oriented <strong>Front-End Developer</strong> with a passion for crafting beautiful,
-        user-friendly,
-        and high-performance web interfaces. With hands-on experience in <strong>HTML, Tailwind CSS, JavaScript, and
-            React</strong>,
-        I specialize in building responsive designs that work seamlessly across all devices.
-        My long-term goal is to evolve into a full-stack developer and contribute to impactful digital innovations
-        worldwide.
-    </p>
-</section>
-
-
-<!-- Career, Mission & Vision Section -->
-<section class="my-20">
-    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">My Goals</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-        <!-- Career -->
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
-            <div class="text-indigo-600 text-4xl mb-3">💼</div>
-            <h3 class="text-xl font-semibold mb-2">Career</h3>
-            <p class="text-gray-700">
-                Building a strong career in web development through continuous learning,
-                hands-on projects, and innovative problem-solving.
-            </p>
+    <main class="relative h-[80vh] flex items-center justify-center text-center text-white overflow-hidden">
+        <!-- Background Images -->
+        <div id="bg-slider" class="absolute inset-0 z-0">
+            <img src="https://source.unsplash.com/1600x900/?coding,programmer"
+                class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+                alt="Slide 1">
+            <img src="https://source.unsplash.com/1600x900/?developer,workspace"
+                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                alt="Slide 2">
+            <img src="https://source.unsplash.com/1600x900/?technology,code"
+                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                alt="Slide 3">
         </div>
 
-        <!-- Mission -->
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
-            <div class="text-green-600 text-4xl mb-3">🎯</div>
-            <h3 class="text-xl font-semibold mb-2">Mission</h3>
-            <p class="text-gray-700">
-                To design and develop impactful digital solutions that empower individuals
-                and businesses to succeed online.
+        <!-- Overlay for dim effect -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
+        <!-- Hero Content -->
+        <section class="relative z-20 px-6 max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Naimul Hasan</h1>
+            <div class="text-xl md:text-2xl mb-6">
+                <span class="typing-text font-semibold text-indigo-300"></span>
+            </div>
+            <p class="text-lg text-gray-200 mb-8 max-w-2xl mx-auto">
+                Full-Stack Developer specializing in building modern, scalable web applications with cutting-edge
+                technologies.
             </p>
-        </div>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="contact.html"
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg shadow-lg transition font-semibold">
+                    Hire Me
+                </a>
+                <a href="portfolio.html"
+                    class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-lg shadow-lg transition font-semibold">
+                    View My Work
+                </a>
+            </div>
+        </section>
+    </main>
 
-        <!-- Vision -->
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
-            <div class="text-yellow-500 text-4xl mb-3">🚀</div>
-            <h3 class="text-xl font-semibold mb-2">Vision</h3>
-            <p class="text-gray-700">
-                To become a globally recognized developer known for creativity,
-                reliability, and meaningful contributions to the tech community.
-            </p>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-    <!-- Services Section -->
-    <section class="py-16 bg-gray-100" id="services">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-12">Our Services</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                <!-- Service 1 -->
-                <div class="bg-white shadow-lg rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300">
-                    <div class="text-red-600 mb-4 text-4xl">💻</div>
-                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
-                    <p class="text-gray-600">We create modern, responsive, and high-performance websites for your
-                        business.
-                    </p>
+    <!-- Quick Stats Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stat-card bg-indigo-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl font-bold text-indigo-600 mb-2">50+</div>
+                    <div class="text-gray-600">Projects Completed</div>
                 </div>
-
-                <!-- Service 2 -->
-                <div class="bg-white shadow-lg rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300">
-                    <div class="text-red-600 mb-4 text-4xl">🎨</div>
-                    <h3 class="text-xl font-semibold mb-2">Graphic Design</h3>
-                    <p class="text-gray-600">Creative and impactful visuals that help your brand stand out.</p>
+                <div class="stat-card bg-indigo-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl font-bold text-indigo-600 mb-2">25+</div>
+                    <div class="text-gray-600">Happy Clients</div>
                 </div>
-
-                <!-- Service 3 -->
-                <div class="bg-white shadow-lg rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300">
-                    <div class="text-red-600 mb-4 text-4xl">📱</div>
-                    <h3 class="text-xl font-semibold mb-2">App Development</h3>
-                    <p class="text-gray-600">Custom mobile applications that connect your brand with users anywhere.</p>
+                <div class="stat-card bg-indigo-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl font-bold text-indigo-600 mb-2">3+</div>
+                    <div class="text-gray-600">Years Experience</div>
                 </div>
-
-                <!-- Service 4 -->
-                <div class="bg-white shadow-lg rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300">
-                    <div class="text-red-600 mb-4 text-4xl">📷</div>
-                    <h3 class="text-xl font-semibold mb-2">Photography</h3>
-                    <p class="text-gray-600">Professional photography to capture your story with creativity and style.
-                    </p>
+                <div class="stat-card bg-indigo-50 p-6 rounded-lg text-center">
+                    <div class="text-3xl font-bold text-indigo-600 mb-2">10+</div>
+                    <div class="text-gray-600">Technologies</div>
                 </div>
-
             </div>
         </div>
     </section>
 
+    <!-- Career Summary Section -->
+    <section class="py-16 bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-indigo-700">Career Summary</h2>
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        A passionate and innovative <strong class="text-indigo-600">Full-Stack Developer</strong> with
+                        expertise in modern web technologies including
+                        <strong class="text-indigo-600">React, Node.js, MongoDB, and cloud platforms</strong>. I
+                        specialize in building scalable,
+                        high-performance applications that solve real-world problems.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        With a strong foundation in both front-end and back-end development, I create seamless digital
+                        experiences
+                        that combine beautiful design with robust functionality. My approach focuses on clean code,
+                        user-centered design,
+                        and continuous learning to stay at the forefront of technology trends.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Services Section -->
+    <section class="py-16 bg-white" id="services">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">My Services</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Comprehensive full-stack development services to bring your digital ideas to life
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Web Development -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop-code text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Web Development</h3>
+                    <p class="text-gray-600">
+                        Custom, responsive websites and web applications built with modern frameworks and best
+                        practices.
+                    </p>
+                </div>
 
-    <footer class="bg-white border-t text-center py-6 text-sm text-gray-500">© 2025 Your Name. All rights reserved.
+                <!-- Backend Development -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-server text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Backend Development</h3>
+                    <p class="text-gray-600">
+                        Robust server-side solutions, APIs, and database architecture for scalable applications.
+                    </p>
+                </div>
+
+                <!-- Full-Stack Solutions -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-layer-group text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Full-Stack Solutions</h3>
+                    <p class="text-gray-600">
+                        End-to-end development from concept to deployment, ensuring seamless integration.
+                    </p>
+                </div>
+
+                <!-- Mobile Development -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Mobile Development</h3>
+                    <p class="text-gray-600">
+                        Cross-platform mobile applications using React Native and progressive web app technologies.
+                    </p>
+                </div>
+
+                <!-- Database Design -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-database text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Database Design</h3>
+                    <p class="text-gray-600">
+                        Efficient database architecture, optimization, and management for optimal performance.
+                    </p>
+                </div>
+
+                <!-- Maintenance & Support -->
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Maintenance & Support</h3>
+                    <p class="text-gray-600">
+                        Ongoing maintenance, updates, and technical support to keep your applications running smoothly.
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="services.html" class="text-indigo-600 hover:text-indigo-700 font-semibold">
+                    View All Services <i class="fas fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Technologies I Use</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Working with modern tools and frameworks to deliver cutting-edge solutions
+            </p>
+            <div class="grid grid-cols-3 md:grid-cols-6 gap-8 max-w-4xl mx-auto">
+                <div class="tech-icon text-center">
+                    <i class="fab fa-react text-4xl text-blue-500 mb-2"></i>
+                    <p class="text-sm font-medium text-gray-700">React</p>
+                </div>
+                <div class="tech-icon text-center">
+                    <i class="fab fa-node-js text-4xl text-green-600 mb-2"></i>
+                    <p class="text-sm font-medium text-gray-700">Node.js</p>
+                </div>
+                <div class="tech-icon text-center">
+                    <i class="fab fa-js-square text-4xl text-yellow-500 mb-2"></i>
+                    <p class="text-sm font-medium text-gray-700">JavaScript</p>
+                </div>
+                <div class="tech-icon text-center">
+                    <i class="fab fa-python text-4xl text-blue-700 mb-2"></i>
+                    <p class="text-sm font-medium text-gray-700">Python</p>
+                </div>
+                <div class="tech-icon text-center">
+                    <i class="fas fa-database text-4xl text-teal-600 mb-2"></i>
+                    <p class="text-sm font-medium text-gray-700">MongoDB</p>
+                </div>
+                <div class="tech-icon text-center">
+                    <i class="fab fa-aws text-4xl text-orange-500 mb-2"></i>
+                    <p class="text-sm font-medium text-gray-700">AWS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career, Mission & Vision Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">My Goals & Vision</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Career -->
+                <div
+                    class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl shadow-md border border-indigo-100">
+                    <div class="text-indigo-600 text-4xl mb-4 text-center">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center">Career Goals</h3>
+                    <p class="text-gray-700 text-center">
+                        Building a successful career in full-stack development through continuous learning,
+                        innovative problem-solving, and delivering exceptional digital solutions.
+                    </p>
+                </div>
+
+                <!-- Mission -->
+                <div
+                    class="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-xl shadow-md border border-green-100">
+                    <div class="text-green-600 text-4xl mb-4 text-center">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center">Mission</h3>
+                    <p class="text-gray-700 text-center">
+                        To design and develop impactful digital solutions that empower individuals
+                        and businesses to succeed in the digital world through innovative technology.
+                    </p>
+                </div>
+
+                <!-- Vision -->
+                <div
+                    class="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-xl shadow-md border border-yellow-100">
+                    <div class="text-yellow-600 text-4xl mb-4 text-center">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-center">Vision</h3>
+                    <p class="text-gray-700 text-center">
+                        To become a globally recognized full-stack developer known for creativity,
+                        technical excellence, and meaningful contributions to the tech community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-8">
+                Let's work together to bring your ideas to life with cutting-edge technology and innovative solutions.
+            </p>
+            <a href="contact.html"
+                class="bg-white text-indigo-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300 inline-block">
+                Get In Touch
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Left Side: Copyright -->
+                <div class="mb-4 md:mb-0 text-center md:text-left">
+                    <p class="text-gray-400">&copy; 2025 Naimul Hasan. All rights reserved.</p>
+                </div>
+
+                <!-- Social links in the center -->
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-github text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-twitter text-xl"></i></a>
+                </div>
+
+                <!-- Right Side: Current date and time -->
+                <div class="text-gray-400 text-center md:text-right">
+                    <p id="dateTime" class="font-medium"></p>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script>
+        // Background Slider
+        const slides = document.querySelectorAll("#bg-slider img");
+        let index = 0;
 
+        setInterval(() => {
+            slides[index].classList.remove("opacity-100");
+            slides[index].classList.add("opacity-0");
+            index = (index + 1) % slides.length;
+            slides[index].classList.remove("opacity-0");
+            slides[index].classList.add("opacity-100");
+        }, 5000); // Change every 5 seconds
 
+        // Typing Animation
+        const typingText = document.querySelector('.typing-text');
+        const texts = [
+            'Full-Stack Developer',
+            'Web Application Specialist',
+            'Problem Solver',
+            'Technology Enthusiast'
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
 
+        function type() {
+            const currentText = texts[textIndex];
 
+            if (isDeleting) {
+                typingText.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
 
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                setTimeout(type, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, isDeleting ? 100 : 150);
+            }
+        }
 
+        // Date and Time Function
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById("dateTime").textContent = now.toLocaleString("en-US", options);
+        }
 
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Start typing animation
+            setTimeout(type, 1000);
 
-
-    <!-- Simple JS for slider -->
-<!-- Background Slider Script -->
-<script>
-    const slides = document.querySelectorAll("#bg-slider img");
-    let index = 0;
-
-    setInterval(() => {
-        slides[index].classList.remove("opacity-100");
-        slides[index].classList.add("opacity-0");
-        index = (index + 1) % slides.length;
-        slides[index].classList.remove("opacity-0");
-        slides[index].classList.add("opacity-100");
-    }, 5000); // Change every 5 seconds
-</script>
+            // Initialize date and time
+            setInterval(updateDateTime, 1000);
+            updateDateTime();
+        });
+    </script>
 </body>
 
 </html>

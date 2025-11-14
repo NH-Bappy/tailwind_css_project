@@ -4,55 +4,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact | Naimul Hasan - Full-Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .form-input:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gray-50 text-gray-800">
     <!-- Navbar -->
-    <header class="bg-white shadow-md py-4">
+    <header class="bg-white shadow-md py-4 sticky top-0 z-10">
         <nav class="container mx-auto flex justify-between items-center px-6">
             <h1 class="text-2xl font-bold text-indigo-600">Naimul Hasan</h1>
             <ul class="flex gap-6">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="index.html" class="hover:text-indigo-600 transition">Home</a></li>
+                <li><a href="about.html" class="hover:text-indigo-600 transition">About</a></li>
+                <li><a href="portfolio.html" class="hover:text-indigo-600 transition">Portfolio</a></li>
+                <li><a href="services.html" class="hover:text-indigo-600 transition">Services</a></li>
                 <li><a href="contact.html" class="text-indigo-600 font-semibold">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Section -->
-    <main class="container mx-auto px-6 py-12 grid md:grid-cols-2 gap-8">
-        <!-- Contact Form -->
-        <section>
-            <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
-            <form class="bg-white p-6 rounded shadow space-y-4">
-                <input type="text" placeholder="Your Name" class="w-full border rounded px-3 py-2" required>
-                <input type="email" placeholder="Your Email" class="w-full border rounded px-3 py-2" required>
-                <input type="text" placeholder="Your Address" class="w-full border rounded px-3 py-2" required>
-                <textarea rows="4" placeholder="Your Message" class="w-full border rounded px-3 py-2"
-                    required></textarea>
-                <button class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Send</button>
-            </form>
-        </section>
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h1>
+            <p class="text-xl max-w-2xl mx-auto">Let's discuss your project and bring your ideas to life with innovative
+                solutions</p>
+        </div>
+    </section>
 
-        <!-- Map Section -->
-        <section class="bg-white p-6 rounded shadow flex items-center justify-center">
-            <!-- Google Maps embed placeholder -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.736624407214!2d90.36969237499476!3d23.75673907868947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bfc7718932b9%3A0x2b54a2b6f43a98e5!2sMirpur%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1730440709000!5m2!1sen!2sbd"
-                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </section>
+    <!-- Main Section -->
+    <main class="container mx-auto px-6 py-16">
+        <div class="grid lg:grid-cols-3 gap-12">
+            <!-- Contact Information -->
+            <div class="lg:col-span-1">
+                <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+                <p class="text-gray-600 mb-8">Feel free to reach out through any of these channels. I typically respond
+                    within 24 hours.</p>
+
+                <div class="space-y-6">
+                    <!-- Email -->
+                    <div class="contact-card bg-white p-6 rounded-lg shadow-md flex items-start">
+                        <div
+                            class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-envelope text-indigo-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-1">Email</h3>
+                            <p class="text-gray-600 mb-2">naimulhasan@example.com</p>
+                            <p class="text-sm text-gray-500">Send me an email anytime</p>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="contact-card bg-white p-6 rounded-lg shadow-md flex items-start">
+                        <div
+                            class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-phone text-indigo-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-1">Phone</h3>
+                            <p class="text-gray-600 mb-2">+880 1XXX-XXXXXX</p>
+                            <p class="text-sm text-gray-500">Mon-Fri from 9am to 6pm</p>
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="contact-card bg-white p-6 rounded-lg shadow-md flex items-start">
+                        <div
+                            class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-indigo-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-1">Location</h3>
+                            <p class="text-gray-600 mb-2">Dhaka, Bangladesh</p>
+                            <p class="text-sm text-gray-500">Available for remote work worldwide</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="contact-card bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="font-semibold text-lg mb-4">Follow Me</h3>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-indigo-600 hover:text-white transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-900 hover:text-white transition">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-400 hover:text-white transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form & Map -->
+            <div class="lg:col-span-2">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Contact Form -->
+                    <div class="md:col-span-2">
+                        <h2 class="text-2xl font-bold mb-6">Send a Message</h2>
+                        <form class="bg-white p-8 rounded-xl shadow-md space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your
+                                        Name</label>
+                                    <input type="text" id="name" placeholder="Enter your name"
+                                        class="w-full border border-gray-300 rounded-lg px-4 py-3 form-input focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Your
+                                        Email</label>
+                                    <input type="email" id="email" placeholder="Enter your email"
+                                        class="w-full border border-gray-300 rounded-lg px-4 py-3 form-input focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="subject"
+                                    class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" placeholder="What is this regarding?"
+                                    class="w-full border border-gray-300 rounded-lg px-4 py-3 form-input focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
+                                    required>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Your
+                                    Message</label>
+                                <textarea id="message" rows="5" placeholder="Tell me about your project or inquiry..."
+                                    class="w-full border border-gray-300 rounded-lg px-4 py-3 form-input focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-indigo-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-indigo-700 transition duration-300 flex items-center justify-center">
+                                <i class="fas fa-paper-plane mr-2"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Map Section -->
+                    <div class="md:col-span-2">
+                        <div class="bg-white p-6 rounded-xl shadow-md">
+                            <h2 class="text-2xl font-bold mb-6">Find Me Here</h2>
+                            <div class="rounded-lg overflow-hidden">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.736624407214!2d90.36969237499476!3d23.75673907868947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bfc7718932b9%3A0x2b54a2b6f43a98e5!2sMirpur%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1730440709000!5m2!1sen!2sbd"
+                                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade" class="rounded-lg">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t text-center py-6 text-sm text-gray-500">
-        © 2025 Ayesha Rahman
+    <!-- FAQ Section -->
+    <section class="bg-indigo-50 py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                        <i class="fas fa-question-circle text-indigo-600 mr-2"></i> What is your typical response time?
+                    </h3>
+                    <p class="text-gray-600">I typically respond to inquiries within 24 hours. For urgent matters,
+                        please mention "URGENT" in your subject line.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                        <i class="fas fa-question-circle text-indigo-600 mr-2"></i> Do you work on fixed-price or hourly
+                        projects?
+                    </h3>
+                    <p class="text-gray-600">I'm flexible with both pricing models. We can discuss which approach works
+                        best for your specific project needs.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                        <i class="fas fa-question-circle text-indigo-600 mr-2"></i> What information should I include in
+                        my project inquiry?
+                    </h3>
+                    <p class="text-gray-600">Please include your project goals, timeline, budget range, and any specific
+                        requirements or preferences you have.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center">
+                        <i class="fas fa-question-circle text-indigo-600 mr-2"></i> Do you provide ongoing maintenance
+                        after project completion?
+                    </h3>
+                    <p class="text-gray-600">Yes, I offer various maintenance packages to ensure your application
+                        continues to run smoothly after deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-8">
+                Let's discuss your ideas and create something amazing together. Get in touch today!
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="tel:+8801XXXXXXXXX"
+                    class="bg-white text-indigo-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center">
+                    <i class="fas fa-phone mr-2"></i> Call Now
+                </a>
+                <a href="mailto:naimulhasan@example.com"
+                    class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-600 font-semibold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center">
+                    <i class="fas fa-envelope mr-2"></i> Send Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Left Side: Copyright -->
+                <div class="mb-4 md:mb-0 text-center md:text-left">
+                    <p class="text-gray-400">&copy; 2025 Naimul Hasan. All rights reserved.</p>
+                </div>
+
+                <!-- Social links in the center -->
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-github text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-twitter text-xl"></i></a>
+                </div>
+
+                <!-- Right Side: Current date and time -->
+                <div class="text-gray-400 text-center md:text-right">
+                    <p id="dateTime" class="font-medium"></p>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Function to update date and time
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById("dateTime").textContent = now.toLocaleString("en-US", options);
+        }
+
+        // Form submission handling
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.querySelector('form');
+
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Simple form validation
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+
+                if (name && email && subject && message) {
+                    // In a real application, you would send the form data to a server here
+                    alert('Thank you for your message! I will get back to you soon.');
+                    contactForm.reset();
+                } else {
+                    alert('Please fill in all required fields.');
+                }
+            });
+
+            // Initialize date and time
+            setInterval(updateDateTime, 1000);
+            updateDateTime();
+        });
+    </script>
 </body>
 
 </html>

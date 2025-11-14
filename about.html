@@ -4,51 +4,365 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Ayesha Rahman</title>
+    <title>About | Naimul Hasan - Full-Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .skill-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #4f46e5;
+        }
+
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 17px;
+            width: 2px;
+            height: calc(100% + 13px);
+            background: #e5e7eb;
+        }
+
+        .timeline-item:last-child:after {
+            display: none;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background-color: #e5e7eb;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1s ease-in-out;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
-    <header class="bg-white shadow-md py-4">
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow-md py-4 sticky top-0 z-10">
         <nav class="container mx-auto flex justify-between items-center px-6">
             <h1 class="text-2xl font-bold text-indigo-600">Naimul Hasan</h1>
             <ul class="flex gap-6">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="hover:text-indigo-600 transition">Home</a></li>
                 <li><a href="about.html" class="text-indigo-600 font-semibold">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="portfolio.html" class="hover:text-indigo-600 transition">Portfolio</a></li>
+                <li><a href="services.html" class="hover:text-indigo-600 transition">Services</a></li>
+                <li><a href="contact.html" class="hover:text-indigo-600 transition">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container mx-auto px-6 py-12">
-        <h2 class="text-3xl font-bold mb-6">About Me</h2>
-        <p class="text-gray-700 mb-8 leading-relaxed">
-            I'm Ayesha Rahman, a passionate front-end developer from Dhaka, Bangladesh.
-            I love crafting clean, modern, and user-friendly web experiences.
-            My goal is to help businesses and individuals bring their ideas to life through great design and
-            functionality.
-        </p>
+    <main>
+        <!-- Hero Section -->
+        <section class="gradient-bg text-white py-16">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-8 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">About Me</h1>
+                        <p class="text-xl max-w-2xl">Full-Stack Developer passionate about creating innovative digital
+                            solutions</p>
+                    </div>
+                    <div class="md:w-1/3 flex justify-center">
+                        <div
+                            class="w-48 h-48 bg-indigo-300 rounded-full flex items-center justify-center text-white text-6xl">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h3 class="text-2xl font-semibold mb-4">Education</h3>
-        <ul class="list-disc ml-6 text-gray-700 mb-8">
-            <li>Diploma in Computer Science — Dhaka Polytechnic Institute (2023)</li>
-            <li>Web Development Bootcamp — Programming Hero (2024)</li>
-        </ul>
+        <!-- About Content -->
+        <section class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="md:col-span-2">
+                    <h2 class="text-3xl font-bold mb-6">My Journey in Tech</h2>
+                    <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            I'm Naimul Hasan, a passionate full-stack developer with expertise in building modern,
+                            scalable web applications.
+                            My journey in technology began with a curiosity for how things work, which evolved into a
+                            career creating digital solutions.
+                        </p>
+                        <p class="text-gray-700 mb-6 leading-relaxed">
+                            I specialize in the MERN stack (MongoDB, Express.js, React, Node.js) but have experience
+                            with various technologies
+                            across the development spectrum. My approach combines technical expertise with user-centered
+                            design to create
+                            applications that are both powerful and intuitive.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            When I'm not coding, I enjoy exploring new technologies, contributing to open-source
+                            projects,
+                            and sharing knowledge with the developer community. I believe in continuous learning and
+                            staying
+                            updated with industry trends to deliver cutting-edge solutions.
+                        </p>
+                    </div>
 
-        <h3 class="text-2xl font-semibold mb-4">Skills</h3>
-        <ul class="grid md:grid-cols-3 gap-4 text-gray-700">
-            <li class="bg-white shadow p-4 rounded">HTML5</li>
-            <li class="bg-white shadow p-4 rounded">CSS3 / Tailwind</li>
-            <li class="bg-white shadow p-4 rounded">JavaScript (ES6)</li>
-            <li class="bg-white shadow p-4 rounded">React</li>
-            <li class="bg-white shadow p-4 rounded">Git & GitHub</li>
-            <li class="bg-white shadow p-4 rounded">Figma</li>
-        </ul>
+                    <!-- Experience Timeline -->
+                    <h3 class="text-2xl font-semibold mb-6">Experience & Education</h3>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="timeline-item">
+                            <h4 class="text-lg font-semibold">Full-Stack Developer</h4>
+                            <p class="text-indigo-600 mb-2">Tech Solutions Ltd. | 2023 - Present</p>
+                            <p class="text-gray-600">Developed and maintained multiple web applications using React,
+                                Node.js, and MongoDB. Led a team of 3 developers on a major e-commerce project.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-lg font-semibold">Frontend Developer</h4>
+                            <p class="text-indigo-600 mb-2">Digital Agency Inc. | 2022 - 2023</p>
+                            <p class="text-gray-600">Created responsive web interfaces for various clients using modern
+                                JavaScript frameworks and CSS preprocessors.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-lg font-semibold">Web Development Bootcamp</h4>
+                            <p class="text-indigo-600 mb-2">Programming Hero | 2024</p>
+                            <p class="text-gray-600">Completed intensive full-stack development program focusing on
+                                modern web technologies and best practices.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 class="text-lg font-semibold">Diploma in Computer Science</h4>
+                            <p class="text-indigo-600 mb-2">Dhaka Polytechnic Institute | 2023</p>
+                            <p class="text-gray-600">Graduated with honors, focusing on software engineering principles,
+                                algorithms, and database management.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills & Expertise -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Technical Skills</h3>
+
+                    <!-- Frontend Skills -->
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                        <h4 class="text-lg font-semibold mb-4 flex items-center">
+                            <i class="fas fa-palette text-indigo-500 mr-2"></i> Frontend
+                        </h4>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">React</span>
+                                    <span class="text-gray-500">90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-indigo-500" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Vue.js</span>
+                                    <span class="text-gray-500">80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-indigo-500" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">HTML/CSS</span>
+                                    <span class="text-gray-500">95%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-indigo-500" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">JavaScript</span>
+                                    <span class="text-gray-500">92%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-indigo-500" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend Skills -->
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                        <h4 class="text-lg font-semibold mb-4 flex items-center">
+                            <i class="fas fa-server text-indigo-500 mr-2"></i> Backend
+                        </h4>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Node.js</span>
+                                    <span class="text-gray-500">88%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-indigo-500" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Express.js</span>
+                                    <span class="text-gray-500">85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-indigo-500" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Python/Django</span>
+                                    <span class="text-gray-500">75%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-indigo-500" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">PHP/Laravel</span>
+                                    <span class="text-gray-500">70%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill bg-indigo-500" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Database & Tools -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="text-lg font-semibold mb-4 flex items-center">
+                            <i class="fas fa-database text-indigo-500 mr-2"></i> Database & Tools
+                        </h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">MySQL</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Firebase</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Git</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Docker</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">AWS</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">REST API</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">GraphQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Facts / Additional Info -->
+        <section class="bg-indigo-50 py-12">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-8">Beyond Coding</h2>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class="fas fa-project-diagram text-indigo-500 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">50+ Projects</h3>
+                        <p class="text-gray-600">Completed various web applications</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class="fas fa-users text-indigo-500 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">25+ Clients</h3>
+                        <p class="text-gray-600">Satisfied businesses and individuals</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class="fas fa-code-branch text-indigo-500 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Open Source</h3>
+                        <p class="text-gray-600">Active contributor to community projects</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <i class="fas fa-award text-indigo-500 text-3xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Certifications</h3>
+                        <p class="text-gray-600">Multiple tech certifications earned</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-white border-t text-center py-6 text-sm text-gray-500">© 2025 Ayesha Rahman</footer>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Left Side: Copyright -->
+                <div class="mb-4 md:mb-0 text-center md:text-left">
+                    <p class="text-gray-400">&copy; 2025 Naimul Hasan. All rights reserved.</p>
+                </div>
+
+                <!-- Social links in the center -->
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-github text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-twitter text-xl"></i></a>
+                </div>
+
+                <!-- Right Side: Current date and time -->
+                <div class="text-gray-400 text-center md:text-right">
+                    <p id="dateTime" class="font-medium"></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to update date and time
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById("dateTime").textContent = now.toLocaleString("en-US", options);
+        }
+
+        // Animate progress bars when they come into view
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize date and time
+            setInterval(updateDateTime, 1000);
+            updateDateTime();
+
+            // Simple animation for progress bars
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 300);
+            });
+        });
+    </script>
 </body>
 
 </html>
